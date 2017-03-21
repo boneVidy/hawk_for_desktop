@@ -1,0 +1,25 @@
+
+.modal
+,
+.back-drop
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 11;
+}
+
+$modalWidth : 400px;
+$modalHeight: 400px;
+.content-wrap {
+  position: absolute;
+  left:calc(50% - 200px);
+  top: calc(50% - 200px);
+  width: $modalWidth;
+  height: $modalHeight;
+  background: #fff;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+  z-index: 12;
+}

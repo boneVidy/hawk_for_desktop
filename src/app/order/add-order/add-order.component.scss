@@ -1,0 +1,18 @@
+@import '../../style/var.scss';
+table th,
+table td
+{
+  height: 42px;
+  line-height: 42px;
+  border: 1px solid  #8595ef;
+  text-align: center;
+}
+table th {
+  background: #cad2ff;
+  color: $primary;
+}
+.no-pro{
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+}

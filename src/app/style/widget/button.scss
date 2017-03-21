@@ -1,0 +1,4 @@
+@import '../mixin.scss';
+.mat-raised-button.primary-btn{
+  @include primaryBg();
+}

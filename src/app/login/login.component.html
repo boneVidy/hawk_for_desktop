@@ -1,0 +1,23 @@
+<md-toolbar color="primary">
+  <span>货氪分销</span>
+</md-toolbar>
+<md-card class="login-box">
+    <md-card-title-group>
+            <md-card-title>登陆</md-card-title>
+
+    </md-card-title-group>
+    <md-card-content>
+        <form (ngSubmit)="login()" #form="ngForm">
+          <div class="row direction-column">
+            <md-input-container class="col">
+                <input mdInput placeholder="工号" required  [(ngModel)]="LoginName" name="LoginName">
+            </md-input-container>
+            <md-input-container class="col">
+                <input mdInput placeholder="密码" required  type="password" [(ngModel)]="Password" name="Password">
+            </md-input-container>
+          </div>
+          <button [disabled]="!form.form.valid" type="submit" class="primary-btn" style="width:100%;" md-raised-button >登陆</button>
+        </form>
+    </md-card-content>
+</md-card>
+

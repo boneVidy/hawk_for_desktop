@@ -1,0 +1,30 @@
+<md-toolbar color="primary">
+  <span>新增订单</span>
+</md-toolbar>
+<table style="width:100%;">
+  <tr>
+    <th>商品条码</th>
+    <th>商品名称</th>
+    <th>原价</th>
+    <th>折扣</th>
+    <th>数量</th>
+    <th>现价</th>
+    <th>小计</th>
+  </tr>
+  <tr *ngFor="let pro of products">
+    <td > {{pro.ProductCode}}</td>
+    <td > {{pro.Fullname}}</td>
+    <td > {{pro.BuyPrice || 0}}</td>
+    <td > {{pro.DiscountPrice || 0}}</td>
+    <td > {{pro.Quantity || 1}}</td>
+    <td > {{pro.SalePrice || 0}}</td>
+    <td > {{pro.Amount || 0}}</td>
+  </tr>
+</table>
+<div *ngIf="products.length === 0" class="no-pro">
+  暂无商品
+</div>
+<app-add-order-footer (onProQueryChange)="onProQueryChange($event)"></app-add-order-footer>
+<app-product-modal [(isShow)]="isShow" [queryStr]="searchQuery" (onProSelected)="onProSelected($event)"></app-product-modal>
+<!--<app-modal [(isShow)]="isShow">aaa</app-modal>-->
+

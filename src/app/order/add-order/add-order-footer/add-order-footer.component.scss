@@ -1,0 +1,72 @@
+@import '../../../style/var.scss';
+$footerbarHeight : 184px;
+$totalBarHeight: 50px;
+.operation-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footerbarHeight;
+
+  .total-bar{
+    padding: 0 15px;
+    height: $totalBarHeight;
+    line-height: $totalBarHeight;
+  }
+  .operation-bar{
+    padding: 0 15px;
+    height: $footerbarHeight - $totalBarHeight;
+    background: #cad2ff;
+    > .col {
+      height: $footerbarHeight - $totalBarHeight;
+      .row {
+        padding-right: 15px;
+        height: $footerbarHeight - $totalBarHeight;
+      }
+    }
+  }
+
+}
+
+.member-row {
+  display: flex;
+
+}
+.vertical-center{
+  justify-content: center;
+  .input-container{
+    color: $primary;
+    width: 100%;
+    height: 44px;
+    background: #fff;
+    border-bottom: 1px solid #cad2ff;
+    margin-bottom: 1px;
+    &:nth-last-child(1){
+      border-bottom: none;
+    }
+  }
+}
+input {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+.submit-btn{
+  background: rgb(255,85,85);
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+}
+.submit-btn .col-33{
+  padding-top: 5px;
+  .recive{
+    font-size: 30px;
+  }
+
+}
+.submit-btn .col-67{
+  line-height: 68px;
+
+}

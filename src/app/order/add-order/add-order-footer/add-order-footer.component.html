@@ -1,0 +1,43 @@
+<div class="operation-footer">
+  <div class="total-bar">
+    共计2件
+  </div>
+  <div class="operation-bar row">
+    <form class="col" (ngSubmit)="proQueryChange()" #form="ngForm" novalidate>
+      <div class="row  vertical-center direction-column" >
+        <div class="input-container">
+          <input name="proQueryStr"  [(ngModel)]="proQueryStr" placeholder="条码/拼音码/品名" />
+         </div>
+      </div>
+
+    </form>
+    <div class="col">
+      <div class="row direction-column vertical-center" >
+          <div class="input-container ">
+            <input  placeholder="会员号/手机号">
+          </div>
+
+          <div class="input-container" >
+            <div class="row">
+              <div class="col text-center" style="height:44px; padding-top:5px;">
+                <span>来宾</span><br/>
+                <span>姓名</span>&ensp;&ensp;<span>查看</span>
+               </div>
+              <div class="col text-center" style="height:44px; padding-top:5px;"><span>10000</span><br/><span>余额</span>&ensp;&ensp;<span>查看</span></div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="row submit-btn" style="height:90px; margin-top:20px;">
+          <div class="col-33">
+            <div class="recive">收&ensp;款</div>
+            <div>空格键</div>
+          </div>
+          <div class="col-67">
+            ￥5000.00
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

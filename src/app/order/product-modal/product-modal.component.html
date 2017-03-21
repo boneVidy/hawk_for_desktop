@@ -1,0 +1,14 @@
+<app-modal [(isShow)]="isShow" (modalHide)="modalHide()">
+  <div class="pro-modal-header">
+    选择商品
+  </div>
+
+  <table style="width:100%;">
+
+    <tr *ngFor="let pro of resultList" (click)="onProClick(pro)">
+      <td class="text-center">{{pro.ProductCode}}</td>
+      <td class="text-center">{{pro.Fullname}}</td>
+      <td class="text-center">{{pro.SalePrice}}</td>
+    </tr>
+  </table>
+</app-modal>

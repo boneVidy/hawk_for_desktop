@@ -1,0 +1,39 @@
+@import '../var.scss';
+@import '../mixin.scss';
+.window {
+  background: #f1f1f1;
+}
+.container {
+  @include absoluteContainer();
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+}
+.container.has-header{
+  top: $headbarHeight;
+  &.has-tab-bar{
+    top: 84px;
+  }
+}
+.container.has-footer
+,.has-footer
+{
+  bottom: $footerBarHeight;
+}
+.container.has-tab-bar{
+  top: 84px;
+}
+.container.has-subheader,
+.has-subheader
+{
+  top: 86px;
+}
+.container.has-search-bar{
+  top: 132px;
+}
+.pic-box div.img{
+  height: $imgPreHeight;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
