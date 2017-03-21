@@ -4,7 +4,7 @@ table td
 {
   height: 42px;
   line-height: 42px;
-  border: 1px solid  #8595ef;
+  border: 1px solid  $border-color;
   text-align: center;
 }
 table th {
@@ -14,5 +14,11 @@ table th {
 .no-pro{
   height: 200px;
   line-height: 200px;
+  text-align: center;
+}
+td input{
+  min-width: 20px;
+  max-width: 90px;
+  background: transparent;
   text-align: center;
 }

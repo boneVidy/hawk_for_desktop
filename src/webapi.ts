@@ -1,2 +1,2 @@
-const API = 'http://192.168.1.89:8888/site/';
+const API = 'http://www.51hawk.com/fx/site/';
 export default  API;

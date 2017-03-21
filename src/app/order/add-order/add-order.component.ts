@@ -11,6 +11,7 @@ export class AddOrderComponent implements OnInit {
   private products:ProModel[] = [];
   private isShow:boolean = false;
   private searchQuery:string = '';
+  private TotalValue:number = 0;
   constructor() { }
 
   ngOnInit() {
@@ -29,11 +30,13 @@ export class AddOrderComponent implements OnInit {
     var index = this.IndexOfProInProducts(pro);
     if (index >= 0) {
       this.products[index].Quantity ++;
-      // this.swapPro(index);
-      return;
+      this.products[index].Amount = this.products[index].Quantity * this.products[index].SalePrice;
+    } else {
+      pro.Quantity = 1;
+      pro.Amount = pro.SalePrice;
+      this.products.push(pro);
     }
-    pro.Quantity = 1;
-    this.products.push(pro);
+    this.TotalValue = this.getTotal();
   }
   swapPro (index:number) {
     let tmpPro:ProModel;
@@ -49,5 +52,15 @@ export class AddOrderComponent implements OnInit {
     }
     return -1;
   }
-
+  qtyChange (pro:ProModel) {
+    pro.Amount = pro.Quantity * pro.SalePrice;
+    this.TotalValue = this.getTotal();
+  }
+  getTotal () {
+    let total = 0;
+    this.products.forEach((pro:ProModel) => {
+      total += pro.Amount;
+    });
+    return total;
+  }
 }

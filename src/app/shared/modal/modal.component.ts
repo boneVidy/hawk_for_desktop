@@ -18,13 +18,15 @@ import {
   animations: [
     trigger('modalState', [
       state('hide', style({
-        transform: 'translate3d(0, 100%,0) scale(0)'
+        transform: 'translate3d(0, 100%,0) scale(0)',
+        opacity: 0
       })),
       state('show', style({
-        transform: 'translate3d(0, 0,0) scale(1)'
+        transform: 'translate3d(0, 0,0) scale(1)',
+        opacity: 1
       })),
-      transition('hide => show',animate('300ms ease-in')),
-      transition('show => hide',animate('300ms ease-out')),
+      transition('hide => show',animate('350ms ease-in')),
+      transition('show => hide',animate('350ms ease-out')),
     ])
   ]
 })

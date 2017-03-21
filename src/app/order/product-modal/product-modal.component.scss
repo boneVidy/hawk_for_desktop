@@ -1,7 +1,23 @@
-.pro-modal-header{
-  position: relative;
-  width: 100%;
+@import '../../style/var.scss';
+.pro-modal-header,
+td, th{
+
   height: 40px;
   line-height: 40px;
+}
+.pro-modal-header{
+  width: 100%;
+  position: relative;
   padding: 0 15px;
+}
+td,th{
+  border: 1px solid $border-color;
+}
+.prolist{
+  position: absolute;
+  top: 40px;
+  left:0;
+  right: 0;
+  bottom:0;
+  overflow: scroll;
 }

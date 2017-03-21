@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'app-add-order-footer',
@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 export class AddOrderFooterComponent implements OnInit {
   private proQueryStr:string = '';
   @Output() onProQueryChange = new EventEmitter<string>();
+  @Input() TotalValue:number = 0;
   constructor() { }
 
   ngOnInit() {
